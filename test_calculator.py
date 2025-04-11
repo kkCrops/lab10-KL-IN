@@ -1,3 +1,7 @@
+# Repository Link: https://github.com/kkCrops/lab10-KL-IN
+# Partner 1: Karen Liang
+# Partner 2: Izzy Nunag
+
 import unittest
 from calculator import *
 
