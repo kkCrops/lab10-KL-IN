@@ -16,10 +16,14 @@ class TestCalculator(unittest.TestCase):
 
     # Partner 1
     def test_multiply(self): # 3 assertions
-        pass
+        self.assertEqual(mul(2, 3), 6)
+        self.assertEqual(mul(6, 0), 0)
+        self.assertAlmostEqual(mul(-6, -1), 6)
 
     def test_divide(self): # 3 assertions
-        pass
+        self.assertEqual(div(2, 6), 3)
+        self.assertEqual(div(0, 6), ZeroDivisionError)
+        self.assertEqual(div(2.1, -6.3), -3)
     ##########################
 
     # Partner 2
@@ -42,17 +46,24 @@ class TestCalculator(unittest.TestCase):
         # call log function inside, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
-        pass
+        with self.assertRaises(ValueError):
+            logarithm(0, 6)
+
 
     def test_hypotenuse(self): # 3 assertions
-        pass
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(-3, -4), 5)
+        self.assertEqual(hypotenuse(4, 0), 4)
 
     def test_sqrt(self): # 3 assertions
         # Test for invalid argument, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #    square_root(NUM)
         # Test basic function
-        pass
+        with self.assertRaises(ValueError):
+            square_root(-3)
+        self.assertEqual(square_root(0), 0)
+        self.assertEqual(square_root(9), 3)
     ##########################
 
 # Do not touch this
