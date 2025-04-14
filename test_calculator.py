@@ -27,7 +27,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(div(2, 6), 3)
         self.assertAlmostEqual(div(2, 7), 3.5)
         self.assertEqual(div(2.1, -6.3), -3)
-    ##########################
 
     # Partner 2
     def test_divide_by_zero(self):# 1 assertion
@@ -42,7 +41,6 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
             logarithm(0, 5)
-    ##########################
     
     # Partner 1
     def test_log_invalid_argument(self):
@@ -50,12 +48,10 @@ class TestCalculator(unittest.TestCase):
         # call log function inside, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
-<<<<<<< HEAD
-=======
+
         with self.assertRaises(ValueError):
             logarithm(0, 6)
 
->>>>>>> ff0617b57bdb02117ef59cf3200e9354015301d6
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -71,7 +67,6 @@ class TestCalculator(unittest.TestCase):
             square_root(-3)
         self.assertEqual(square_root(0), 0)
         self.assertEqual(square_root(9), 3)
-    ##########################
 
 # Do not touch this
 if __name__ == "__main__":
